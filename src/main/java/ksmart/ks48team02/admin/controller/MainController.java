@@ -15,7 +15,7 @@ public class MainController {
 								HttpSession session) {
 
 		// 세션 기본값 설정
-		String getSid = (String) session.getAttribute("SID");
+		/*String getSid = (String) session.getAttribute("SID");
 		String getStype = (String) session.getAttribute("STYPECODE");
 		session.removeAttribute("SSTORECODE");
 
@@ -31,7 +31,7 @@ public class MainController {
 			session.setAttribute("SID", "id001");
 			session.setAttribute("STYPECODE", "mem_type_01");
 			session.setAttribute("SNAME", "채송아");
-		}
+		}*/
 
 
 		return "admin/index";
