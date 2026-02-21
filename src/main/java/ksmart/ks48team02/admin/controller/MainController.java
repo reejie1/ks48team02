@@ -13,6 +13,14 @@ public class MainController {
 	@GetMapping(value = {"", "/"})
 	public String adminMainPage(Model model,
 								HttpSession session) {
+									
+		//로그인 한 아이디 불러오기
+        String memberId = (String) session.getAttribute("SID");
+
+        //로그인 하지 않았다면 로그인 화면으로 이동.
+        if(memberId == null) {
+            return "user/account/login";
+        }
 
 		// 세션 기본값 설정
 		/*String getSid = (String) session.getAttribute("SID");

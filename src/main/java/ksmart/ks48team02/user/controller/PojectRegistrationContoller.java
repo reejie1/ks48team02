@@ -171,7 +171,16 @@ public class PojectRegistrationContoller {
     }
     // 기부 프로젝트 등록 폼
     @GetMapping("/donation")
-    public String donationRegistrationPage(Model model) {
+    public String donationRegistrationPage(Model model, HttpSession session) {
+
+        //로그인 한 아이디 불러오기
+        String memberId = (String) session.getAttribute("SID");
+
+        //로그인 하지 않았다면 로그인 화면으로 이동.
+        if(memberId == null) {
+            return "user/account/login";
+        }
+
         List<TotalCategory> categoryList = totalCategoryService.categoryByPatition("donation");
         model.addAttribute("categoryList",categoryList);
 

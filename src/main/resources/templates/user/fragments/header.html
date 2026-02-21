@@ -62,7 +62,7 @@
 	        	</form>
 	        	<ul class="user-connection-menu">
 	        		<li th:if="${session.SID == null}"><a th:href="@{/user/account/login}">로그인</a></li>
-	        		<li th:if="${session.SID == null}"><a th:href="@{/user/account}">회원가입</a></li>
+	        		<!-- <li th:if="${session.SID == null}"><a th:href="@{/user/account}">회원가입</a></li> -->
 					<li th:unless="${session.SID == null}">
 						<a class="header-menu-icon myPage-icon"></a>
 						<ul class="header-menu-submenu" style="--variable-index: 4;">

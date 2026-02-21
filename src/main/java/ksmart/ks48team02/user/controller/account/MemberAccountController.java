@@ -22,11 +22,11 @@ public class MemberAccountController {
     }
 
     // 회원가입 메인 페이지
-    @GetMapping(value={"","/"})
+    /*@GetMapping(value={"","/"})
     public String joinPage() {
 
         return "user/account/main";
-    }
+    }*/
 
     // 회원 가입 처리 후 이동
     @PostMapping(value="/join")
